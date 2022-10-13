@@ -1,0 +1,20 @@
+"""
+Problem 1-
+Bir listeyi düzleştiren (flatten) fonksiyon yazın. Elemanları birden çok katmanlı listelerden ([[3],2] gibi) oluşabileceği gibi, non-scalar verilerden de oluşabilir. Örnek olarak:
+input: [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+output: [1,'a','cat',2,3,'dog',4,5]
+"""
+
+liste = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]   #verilen input için liste adında bir liste oluşturduk.
+
+new_list = []   #istenilen düz listemiz için boş ve new_list adında bir liste oluşturuyoruz.
+
+#liste içerisindeki listelerden kurtulmak için bir fonksiyon tanımlıyoruz.
+def duz(a):   
+    for i in a:
+        if type(i)==list:
+            duz(i)
+        else:
+            new_list.append(i)
+    return new_list
+duz(liste)
