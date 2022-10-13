@@ -1,0 +1,8 @@
+6 lines (6 sloc)  196 Bytes
+
+1.Step  =   22,27,16,2,18,6   (n=6)
+2.Step  =   2,27,16,22,18,6   (n=5)
+3.Step  =   2,6,16,22,18,27   (n=4)
+4.Step  =   2,6,16,18,22,27
+18 is included in the average case.
+Big O Notation = O(n^2)
