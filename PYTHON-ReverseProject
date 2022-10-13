@@ -1,0 +1,19 @@
+"""
+
+Problem2- 
+Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın. Eğer listenin içindeki elemanlar da liste içeriyorsa onların elemanlarını da tersine döndürün. Örnek olarak:
+input: [[1, 2], [3, 4], [5, 6, 7]]
+output: [[[7, 6, 5], [4, 3], [2, 1]]
+
+"""
+l =[[1, 2], [3, 4], [5, 6, 7]]    #input olarak verilen listeyi l adı ile tanımladık.
+
+#reverse adında bir fonksiyon oluşturduk.Bu fonksiyon ile listeyi ters çevirme işlemini yaptık.
+def reverse(x):
+    new_l=[]    #new_l bizi ters çevrilmiş yeni listemizin adı.İlk boş bir liste olarak tanımladık.
+    y=x[::-1]   #önce x listemizin elemanlarını ters dizdik.
+    for i in y: 
+        i=i[::-1]     # x listemizin içindeki her bir elemanın içerisindeki listeyi ters çevirdik.
+        new_l.append(i)  # oluşan yeni elemanları new_l listemize ekledik.
+    return new_l
+reverse(l)
